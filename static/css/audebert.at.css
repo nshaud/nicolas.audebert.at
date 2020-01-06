@@ -1,0 +1,417 @@
+/* Navigation bar */
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    justify-items: end;
+    color:black;
+    /*background-color: #4d4855;
+    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);*/
+    margin-bottom: 10px;
+}
+
+.navlink {
+    display: inline-block;
+    font-size: 1.3em;
+    position: relative;
+    margin: 5px 0px 10px 0px;
+    vertical-align: middle;
+}
+
+.navlink > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navlink::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2e5f41;
+    transform-origin: center;
+    transform: translate(-50%, 0) scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+.navlink:hover::before {
+    transform: translate(-50%, 0) scaleX(1);
+}
+
+/* Side info */
+
+@media screen and (min-width: 740px){
+    .flex-container {
+        display: flex;
+        margin: auto;
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 740px){
+    aside .picture {
+        float: left;
+        padding-right: 10px;
+
+    }
+
+    aside > section > ul {
+        display: grid;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        justify-items: end;
+        width: 100%;
+        margin: auto;
+    }
+
+    aside > section > ul > li {
+        display: inline-block;
+        grid-row: 1;
+    }
+
+    #sitename {
+        display: none;
+    }
+
+    aside {
+        margin-bottom: 1em;
+    }
+
+    h3.navlink {
+        font-size: 1.1em;
+        margin: 7px 3px 7px 3px;
+    }
+
+    aside > h1 {
+        margin-top: 0.5em;
+        margin-bottom: 0px;
+    }
+
+    #about > p {
+        margin: 3px 0px 3px 0px;
+    }
+
+    .picture > img {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+aside {
+    flex: 0 1 320px;
+    box-sizing: border-box;
+    padding: 0px 15px 0px 5px;
+    margin-top: 0.2em;
+}
+
+aside ul {
+    width: 50%;
+    margin-left: 10%;
+    margin-right: 40%;
+    padding: 0px;
+}
+
+aside ul > li {
+    list-style-type: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+aside ul > li > a > span {
+    position: relative;
+  }
+
+/* CSS fx on sidebar links */
+aside ul > li > a > span::before, aside ul > li > a > span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #2e5f41;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+  
+  aside ul > li > a > span::before {
+    top: 0;
+    transform-origin: center right;
+  }
+  
+  aside ul > li > a > span:hover::before {
+    transform-origin: center left;
+    transform: scaleX(1);
+  }
+  
+  aside ul > li > a > span::after {
+    bottom: 0;
+    transform-origin: center left;
+  }
+  
+  aside ul > li > a > span:hover::after {
+    transform-origin: center right;
+    transform: scaleX(1);
+  }
+  
+  
+
+aside .picture {
+    text-align: center;
+}
+
+aside .picture > img {
+    border-radius: 50%;
+    opacity: 1;
+}
+
+aside a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    width: 100%;
+    opacity: 0.5;
+    font-size: 0.8em;
+    margin-top: 1em;
+}
+
+/* Titles */
+
+h1 {
+    font-size: 1.3em;
+}
+
+h2 {
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+/* Structure */
+
+@media screen and (min-width: 960px) {
+    html {
+        width:100vw;
+        overflow-x:hidden;
+    }    
+}
+
+body {
+    background-color: #eeeeee;
+    font-family: 'Crimson Text';
+    font-size: 1.1em;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color: inherit;
+}
+
+h1, h2, .navlink {
+    font-family: 'Neuton';
+}
+
+h1 {
+    margin: 10px 0px 10px 0px;
+}
+
+h2 {
+    margin: 6px 0px 10px 0px;
+}
+
+h3 {
+    margin: 15px 0px 6px 0px;
+}
+
+.content {
+    flex: 1;
+    padding: 0px 10px 0px 10px;
+}
+
+a.invisible {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+:target ~section {
+    transition: opacity 0.2s ease-out;
+    opacity: 0; 
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.news > p:nth-child(n+7){
+    display: none;
+}
+
+#news:target ~.news > p {
+    display: block;
+}
+
+#news:target ~.news,
+#research:target ~.research,
+#code:target ~.code,
+#publications:target ~.publications,
+#teaching:target ~.teaching,
+#resume:target ~.resume
+{
+    opacity: 1;
+    width: 100%;
+    transition: opacity 0.2s ease-in;
+    height: auto;
+}
+
+.content ul {
+    margin: 10px 0px 20px 0px;
+}
+
+/* Icons */
+
+svg.icon {
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    text-decoration: none;
+}
+
+a:active, a:focus {
+    border: none;
+    outline: none;
+}
+
+.content a:hover {
+    color: #222222;
+
+}
+
+/* Fonts */
+
+/* crimson-text-regular - latin */
+@font-face {
+    font-family: 'Crimson Text';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Crimson Text Regular'), local('CrimsonText-Regular'),
+         url('../fonts/crimson-text-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/crimson-text-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* crimson-text-600 - latin */
+  @font-face {
+    font-family: 'Crimson Text';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Crimson Text SemiBold'), local('CrimsonText-SemiBold'),
+         url('../fonts/crimson-text-v10-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/crimson-text-v10-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* crimson-text-italic - latin */
+  @font-face {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Crimson Text Italic'), local('CrimsonText-Italic'),
+         url('../fonts/crimson-text-v10-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/crimson-text-v10-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* crimson-text-600italic - latin */
+  @font-face {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Crimson Text SemiBold Italic'), local('CrimsonText-SemiBoldItalic'),
+         url('../fonts/crimson-text-v10-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/crimson-text-v10-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* crimson-text-700 - latin */
+  @font-face {
+    font-family: 'Crimson Text';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Crimson Text Bold'), local('CrimsonText-Bold'),
+         url('../fonts/crimson-text-v10-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/crimson-text-v10-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* crimson-text-700italic - latin */
+  @font-face {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Crimson Text Bold Italic'), local('CrimsonText-BoldItalic'),
+         url('../fonts/crimson-text-v10-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/crimson-text-v10-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* neuton-200 - latin */
+@font-face {
+    font-family: 'Neuton';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Neuton ExtraLight'), local('Neuton-ExtraLight'),
+         url('../fonts/neuton-v12-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/neuton-v12-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* neuton-300 - latin */
+  @font-face {
+    font-family: 'Neuton';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Neuton Light'), local('Neuton-Light'),
+         url('../fonts/neuton-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/neuton-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* neuton-regular - latin */
+  @font-face {
+    font-family: 'Neuton';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Neuton Regular'), local('Neuton-Regular'),
+         url('../fonts/neuton-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/neuton-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* neuton-700 - latin */
+  @font-face {
+    font-family: 'Neuton';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Neuton Bold'), local('Neuton-Bold'),
+         url('../fonts/neuton-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/neuton-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* neuton-800 - latin */
+  @font-face {
+    font-family: 'Neuton';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Neuton ExtraBold'), local('Neuton-ExtraBold'),
+         url('../fonts/neuton-v12-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/neuton-v12-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* neuton-italic - latin */
+  @font-face {
+    font-family: 'Neuton';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Neuton Italic'), local('Neuton-Italic'),
+         url('../fonts/neuton-v12-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/neuton-v12-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
