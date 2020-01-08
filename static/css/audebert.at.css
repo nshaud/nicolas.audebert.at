@@ -92,7 +92,7 @@ nav {
         margin-bottom: 0px;
     }
 
-    #about > p {
+    #about > h2 {
         margin: 3px 0px 3px 0px;
     }
 
@@ -100,6 +100,11 @@ nav {
         height: 75px;
         width: 75px;
     }
+}
+
+#about > h2 {
+    font-size: 1em;
+    font-weight: normal;
 }
 
 aside {
@@ -273,6 +278,10 @@ a.invisible {
 
 .content ul {
     margin: 10px 0px 20px 0px;
+}
+
+.strike {
+    text-decoration: line-through;
 }
 
 /* Icons */
