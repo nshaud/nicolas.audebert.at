@@ -167,7 +167,14 @@ aside ul > li > a > span::before, aside ul > li > a > span::after {
 
 aside .picture {
     text-align: center;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
 }
+
+aside .picture:hover {
+    filter: grayscale(0%);
+}
+
 
 aside .picture > img {
     border-radius: 50%;
