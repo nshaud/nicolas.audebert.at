@@ -262,11 +262,18 @@ a.invisible {
     overflow: hidden;
 }
 
-.news > p:nth-child(n+7){
+.news > p:nth-child(n+7) {
+    display: none;
+}
+
+.news > ul:nth-child(n+7){
     display: none;
 }
 
 #news:target ~.news > p {
+    display: block;
+}
+#news:target ~.news > ul {
     display: block;
 }
 
