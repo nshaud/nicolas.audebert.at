@@ -246,6 +246,7 @@ h3 {
 .content {
     flex: 1;
     padding: 0px 10px 0px 10px;
+    text-align: justify;
 }
 
 a.invisible {
@@ -293,6 +294,7 @@ a.invisible {
 
 .content ul {
     margin: 10px 0px 20px 0px;
+    list-style-type: square;
 }
 
 .strike {
