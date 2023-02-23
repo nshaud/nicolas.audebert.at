@@ -347,6 +347,7 @@ a:active, a:focus {
     src: local('Crimson Text Regular'), local('CrimsonText-Regular'),
          url('../fonts/crimson-text-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/crimson-text-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
   
   /* crimson-text-600 - latin */
@@ -357,6 +358,7 @@ a:active, a:focus {
     src: local('Crimson Text SemiBold'), local('CrimsonText-SemiBold'),
          url('../fonts/crimson-text-v10-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/crimson-text-v10-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
   
   /* crimson-text-italic - latin */
@@ -367,6 +369,7 @@ a:active, a:focus {
     src: local('Crimson Text Italic'), local('CrimsonText-Italic'),
          url('../fonts/crimson-text-v10-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/crimson-text-v10-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
   
   /* crimson-text-600italic - latin */
@@ -377,6 +380,7 @@ a:active, a:focus {
     src: local('Crimson Text SemiBold Italic'), local('CrimsonText-SemiBoldItalic'),
          url('../fonts/crimson-text-v10-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/crimson-text-v10-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
   
   /* crimson-text-700 - latin */
@@ -387,6 +391,7 @@ a:active, a:focus {
     src: local('Crimson Text Bold'), local('CrimsonText-Bold'),
          url('../fonts/crimson-text-v10-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/crimson-text-v10-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
   
   /* crimson-text-700italic - latin */
@@ -397,6 +402,7 @@ a:active, a:focus {
     src: local('Crimson Text Bold Italic'), local('CrimsonText-BoldItalic'),
          url('../fonts/crimson-text-v10-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/crimson-text-v10-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
 }
 
 /* neuton-200 - latin */
@@ -407,6 +413,7 @@ a:active, a:focus {
     src: local('Neuton ExtraLight'), local('Neuton-ExtraLight'),
          url('../fonts/neuton-v12-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/neuton-v12-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
   
   /* neuton-300 - latin */
@@ -417,6 +424,7 @@ a:active, a:focus {
     src: local('Neuton Light'), local('Neuton-Light'),
          url('../fonts/neuton-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/neuton-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
   
   /* neuton-regular - latin */
@@ -427,6 +435,7 @@ a:active, a:focus {
     src: local('Neuton Regular'), local('Neuton-Regular'),
          url('../fonts/neuton-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/neuton-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
   
   /* neuton-700 - latin */
@@ -437,6 +446,7 @@ a:active, a:focus {
     src: local('Neuton Bold'), local('Neuton-Bold'),
          url('../fonts/neuton-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/neuton-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
   
   /* neuton-800 - latin */
@@ -447,6 +457,7 @@ a:active, a:focus {
     src: local('Neuton ExtraBold'), local('Neuton-ExtraBold'),
          url('../fonts/neuton-v12-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/neuton-v12-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
   
   /* neuton-italic - latin */
@@ -457,4 +468,5 @@ a:active, a:focus {
     src: local('Neuton Italic'), local('Neuton-Italic'),
          url('../fonts/neuton-v12-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/neuton-v12-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
   }
