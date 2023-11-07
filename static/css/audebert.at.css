@@ -322,7 +322,7 @@ section {
 
 svg.icon {
     height: 1em;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
     margin-right: 0.5em;
     text-decoration: none;
 }
